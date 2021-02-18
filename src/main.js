@@ -13,16 +13,7 @@ Vue.use(VueMaterial);
 Vue.use(VueRouter);
 Vue.config.productionTip = false;
 
-const lyticus = new Lyticus("uRXklPzkos3tFAZw7Lumv", {
-  development: process.env.NODE_ENV === "development",
-  getPath: () => {
-    const route = router.currentRoute;
-    if (!route || !route.name) {
-      return window.location.pathname;
-    }
-    return route.name;
-  },
-});
+const lyticus = new Lyticus("uRXklPzkos3tFAZw7Lumv");
 lyticus.startHistoryMode();
 Vue.prototype.$lyticus = lyticus;
 
