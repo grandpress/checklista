@@ -7,7 +7,11 @@
       <div class="md-layout-item md-size-60">
         <p class="md-title">Checklista UI dla stron usługowych</p>
         <p class="md-subtitle">Narzędzie do generowania raportów</p>
-        <TableSearch :pointsIncoming="pointsIncoming" :textData="textData" />
+        <TableSearch
+          :pointsIncoming="pointsIncoming"
+          :textData="textData"
+          button="ecommerce"
+        />
       </div>
     </div>
   </div>

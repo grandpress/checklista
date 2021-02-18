@@ -60,7 +60,10 @@
         </div>
       </div>
       <div class="generateSection">
-        <md-button type="submit" class="md-accent md-raised generateButton"
+        <md-button
+          type="submit"
+          @click="trackClick"
+          class="md-accent md-raised generateButton"
           >Generuj</md-button
         >
         <p class="isLoading" v-if="isLoading">
@@ -104,7 +107,7 @@ const searchByName = (items, term) => {
 
 export default {
   name: "TableSearch",
-  props: ["pointsIncoming", "textData"],
+  props: ["pointsIncoming", "textData", "button"],
   data: () => ({
     form: {
       domainName: "",
@@ -130,6 +133,9 @@ export default {
     })();
   },
   methods: {
+    trackClick() {
+      this.$lyticus.trackClick(this.button);
+    },
     searchOnTable() {
       this.searched = searchByName(this.pointsIncoming, this.search);
     },
