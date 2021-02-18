@@ -10,7 +10,7 @@
         <TableSearch
           :pointsIncoming="pointsIncoming"
           :textData="textData"
-          button="ecommerce"
+          button="services"
         />
       </div>
     </div>
